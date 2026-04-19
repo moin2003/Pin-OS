@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pin OS Automation — Schedule & Publish Pinterest Pins</title>
+  <meta name="description" content="Pin OS is a personal automation tool designed to help users schedule and publish Pinterest pins efficiently using official APIs." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e60023'/><circle cx='16' cy='13' r='5.5' fill='white'/><line x1='16' y1='18' x2='14.5' y2='26' stroke='white' stroke-width='2.4' stroke-linecap='round'/></svg>" />
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="10" r="5" fill="white"/>
+          <line x1="12" y1="15" x2="10.8" y2="22" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">
+        <span class="logo-pin">Pin</span><span class="logo-os">OS</span>
+      </span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+
+    <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">
+      <!-- Moon (shown in dark mode) -->
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <!-- Sun (shown in light mode) -->
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════ -->
+<section class="hero">
+  <!-- background layers -->
+  <div class="hero-glow"></div>
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+
+  <!-- content -->
+  <div class="hero-badge">
+    <span class="badge-dot"></span>
+    Pinterest Automation Tool
+  </div>
+
+  <h1>Pin <span class="grad">OS</span><br>Automation</h1>
+
+  <p class="hero-sub">Automate your Pinterest posting with ease</p>
+
+  <p class="hero-desc">
+    Pin OS is a personal automation tool designed to help users schedule
+    and publish Pinterest pins efficiently using official APIs.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#features" class="btn btn-primary">
+      Explore Features
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+    <a href="#about" class="btn btn-ghost">Learn More</a>
+  </div>
+
+  <!-- scroll indicator — absolute, bottom of hero -->
+  <div class="scroll-hint">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══ STAT BAR ══════════════════════════════ -->
+<div class="stat-bar-wrap">
+  <div class="stat-bar reveal">
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Official API</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">OAuth 2</span>
+      <span class="stat-label">Secure Auth</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">0 Data</span>
+      <span class="stat-label">Stored Externally</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ FEATURES ══════════════════════════════ -->
+<div class="section" id="features">
+  <div class="features-header reveal">
+    <span class="section-label section-label-center">What We Offer</span>
+    <h2 class="section-title" style="text-align:center">
+      Everything you need to <span class="grad">automate</span>
+    </h2>
+    <p class="section-desc" style="text-align:center; margin: 0 auto">
+      A focused set of tools built around the Pinterest API to streamline your content publishing workflow.
+    </p>
+  </div>
+
+  <div class="cards">
+    <div class="card reveal">
+      <div class="card-glow"></div>
+      <div class="card-icon">
+        <span class="card-num">1</span>
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3>Automated Pin Posting</h3>
+      <p>Automatically publish pins to your Pinterest boards without manual effort. Set it up once and let the system handle the rest seamlessly.</p>
+    </div>
+
+    <div class="card reveal" style="transition-delay:.08s">
+      <div class="card-glow"></div>
+      <div class="card-icon">
+        <span class="card-num">2</span>
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <h3>Scheduling System</h3>
+      <p>Plan and queue your pins in advance. Define posting times to maintain a consistent content cadence and maximize reach.</p>
+    </div>
+
+    <div class="card reveal" style="transition-delay:.16s">
+      <div class="card-glow"></div>
+      <div class="card-icon">
+        <span class="card-num">3</span>
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>
+      <h3>Secure API Integration</h3>
+      <p>All requests are made through Pinterest's official OAuth 2.0 APIs. Your credentials stay safe — no third-party storage, no shortcuts.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══ ABOUT ══════════════════════════════════ -->
+<div class="section" id="about">
+  <div class="about-inner">
+    <div class="about-visual reveal">
+      <div class="term-panel">
+        <div class="term-header">
+          <div class="term-dot r"></div>
+          <div class="term-dot y"></div>
+          <div class="term-dot g"></div>
+          <span class="term-title">pin-os — system status</span>
+        </div>
+        <div class="term-rows">
+          <div class="term-row">
+            <div class="row-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="row-label">Pinterest API v5</span>
+            <span class="badge badge-g">Active</span>
+          </div>
+          <div class="term-row">
+            <div class="row-icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <span class="row-label">OAuth 2.0 Auth</span>
+            <span class="badge badge-g">Secure</span>
+          </div>
+          <div class="term-row">
+            <div class="row-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="row-label">Scheduled Publishing</span>
+            <span class="badge badge-b">Running</span>
+          </div>
+          <div class="term-row">
+            <div class="row-icon">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <span class="row-label">External Storage</span>
+            <span class="badge badge-r">None</span>
+          </div>
+          <div class="term-row">
+            <div class="row-icon">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <span class="row-label">Automation Mode</span>
+            <span class="badge badge-p">Personal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-toast">
+        <div class="toast-icon">📌</div>
+        <div class="toast-text">
+          <strong>Pin Published</strong>
+          <span>via official API · just now</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text reveal" style="transition-delay:.12s">
+      <span class="section-label">About This Tool</span>
+      <h2 class="section-title">
+        Built for reliable,<br><span class="grad">personal automation</span>
+      </h2>
+      <p class="section-desc">
+        This application is built for personal use and testing Pinterest API integration.
+        It helps automate pin publishing workflows and improve content consistency.
+      </p>
+      <p class="section-desc" style="margin-top:16px">
+        All interactions with Pinterest are handled through official, approved API
+        endpoints to ensure full compliance and security at every step.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CTA ════════════════════════════════════ -->
+<div class="cta-wrap">
+  <div class="cta-box reveal">
+    <h2>Ready to automate your pins?</h2>
+    <p>Built on the official Pinterest API. Secure, reliable, and designed for personal use.</p>
+    <a href="#features" class="btn btn-primary">
+      Get Started
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<!-- ══ FOOTER ═════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-logo">
+      <div class="footer-logo-icon">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="10" r="5" fill="white"/>
+          <line x1="12" y1="15" x2="10.8" y2="22" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="footer-logo-text">
+        <span class="logo-pin">Pin</span><span class="logo-os">OS</span>
+        <span style="font-size:12px;font-weight:400;color:var(--text-dim);margin-left:4px;letter-spacing:.3px;">Automation</span>
+      </span>
+    </a>
+    <span class="footer-copy">© 2026 Pin OS Automation</span>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // ── Theme toggle ──
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeBtn');
+  const saved = localStorage.getItem('pinos-theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+
+  btn.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('pinos-theme', next);
+  });
+
+  // ── Scroll reveal ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.10 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
